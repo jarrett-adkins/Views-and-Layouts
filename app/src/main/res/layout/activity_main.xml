@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.example.admin.viewsandlayouts.MainActivity">
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:hint="First Name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:onClick="savePerson"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Save To List"/>
+
+        <Button
+            android:id="@+id/btnPrint"
+            android:onClick="printPersons"
+            android:layout_toRightOf="@id/btnSave"
+            android:layout_below="@id/btnSave"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Print Names"/>
+
+        <Button
+            android:id="@+id/btnSecondActivity"
+            android:text="Go To Second"
+            android:layout_toRightOf="@id/btnPrint"
+            android:onClick="goToSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivKitty"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/cat" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivKitty2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/cat"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="meow"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"/>
+
+    </FrameLayout>
+
+</LinearLayout>
